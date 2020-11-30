@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPL_Component1", "GPL_Component1\GPL_Component1.csproj", "{931A869F-15A2-465C-8CE4-50A130AB7CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPL_Tests", "GPL_Tests\GPL_Tests.csproj", "{7ED290CB-CCBC-484C-9F47-5CB73FB6492D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{931A869F-15A2-465C-8CE4-50A130AB7CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931A869F-15A2-465C-8CE4-50A130AB7CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931A869F-15A2-465C-8CE4-50A130AB7CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931A869F-15A2-465C-8CE4-50A130AB7CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED290CB-CCBC-484C-9F47-5CB73FB6492D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED290CB-CCBC-484C-9F47-5CB73FB6492D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED290CB-CCBC-484C-9F47-5CB73FB6492D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED290CB-CCBC-484C-9F47-5CB73FB6492D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11FC9DC6-FB55-4D40-925E-27391FCC89B9}
+	EndGlobalSection
+EndGlobal
