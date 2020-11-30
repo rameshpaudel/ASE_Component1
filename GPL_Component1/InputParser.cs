@@ -10,7 +10,7 @@ namespace GPL_Component1
 {
     class InputParser
     {
-
+        //Validators to validate all methods
         BaseParameterValidation baseValidator;
         ShapesValidator shapeValidator;
         public InputParser(Graphics g, string inp)
