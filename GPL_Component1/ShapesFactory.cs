@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace GPL_Component1
 {
-    class ShapesFactory
+    public class ShapesFactory
     {
 
-        public Shape getShape(String shapeType)
+        public Shape GetShape(String shapeType)
         {
             shapeType = shapeType.ToUpper().Trim(); 
 
