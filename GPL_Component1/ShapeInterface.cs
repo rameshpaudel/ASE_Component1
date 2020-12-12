@@ -11,8 +11,5 @@ namespace GPL_Component1
     {       
             void set(System.Drawing.Color c, params int[] list);
             void draw(Graphics g);
-            double calcArea();
-            double calcPerimeter();
-
     }
 }

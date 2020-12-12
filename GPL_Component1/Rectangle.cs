@@ -42,14 +42,6 @@ namespace GPL_Component1
             g.DrawRectangle(p, x, y, width, height);
         }
 
-        public override double calcArea()
-        {
-            return width * height;
-        }
-
-        public override double calcPerimeter()
-        {
-            return 2 * width + 2 * height;
-        }
+  
     }
 }
