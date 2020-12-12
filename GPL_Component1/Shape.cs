@@ -7,24 +7,37 @@ using System.Threading.Tasks;
 
 namespace GPL_Component1
 {
-    abstract class Shape:ShapeInterface
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>    Abstract Shape class  </summary>
+    ///
+    /// <remarks>   Ramesh Paudel. </remarks>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    public abstract class Shape : ShapeInterface
     {
         protected Boolean isFilled = true;
         //The default color
-        protected Color color; 
-        protected int x, y; 
+        protected Color color;
+        protected int x, y;
         //Stroke size for borders
         protected int strokeSize = 1;
-        
-        //
-        protected  Point lastPoint;
-        protected  Point currentPoint;
+
+        //Points for line
+        protected Point lastPoint;
+        protected Point currentPoint;
 
         public Shape()
         {
             color = Color.Red;
             x = y = 100;
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Sets if the shape is  filled. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel </remarks>
+        ///
+        /// <param name="status">  Set true to fill the shape. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public void setFill(Boolean status)
         {
@@ -40,16 +53,25 @@ namespace GPL_Component1
             //can't provide anything else as "shape" is too general
         }
 
-       // Draw the shape on the graphics
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Draw the shape on the graphics </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="g">    The Graphics to process. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public abstract void draw(Graphics g); //any derrived class must implement this method
-        
-        //Calculate the area 
-        public abstract double calcArea();
 
-        //Calculate the Perimeter
-        public abstract double calcPerimeter();
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Set the x,y coordinates </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="colour">   The colour to be set. </param>
+        /// <param name="list">     A variable-length parameters list containing list. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        //Set the x,y coordinates
         public virtual void set(Color colour, params int[] list)
         {
             this.color = colour;
@@ -57,25 +79,59 @@ namespace GPL_Component1
             this.y = list[1];
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Sets the size of stroke. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="size"> The size. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public void setStroke(int size)
         {
             this.strokeSize = size;
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Sets the default color. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="c">    A Color to process. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public void setColor(Color c)
         {
             this.color = c;
         }
-        public override string ToString()
-        {
-            return base.ToString() + "    " + this.x + "," + this.y + " : ";
-        }
 
-        //Set the point, its used in case of line
-        public  void setPoint(Point lastPoint , Point current)
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Set the point, its used in case of line </summary>
+        ///
+        /// <remarks>   Ramesh Paudel </remarks>
+        ///
+        /// <param name="lastPoint">    The starting point of line. </param>
+        /// <param name="current">      The ending point of the line. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        public void setPoint(Point lastPoint, Point current)
         {
             this.lastPoint = lastPoint;
             this.currentPoint = current;
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Sets the x,y coordinates. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="list"> A variable-length parameters list containing list. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public void setCoordinates(int[] list)
+        {
+            this.x = list[0];
+            this.y = list[1];
+
         }
     }
 }

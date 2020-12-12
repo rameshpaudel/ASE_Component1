@@ -10,15 +10,6 @@ namespace GPL_Component1
     class Line : Shape
     {
    
-        public override double calcArea()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override double calcPerimeter()
-        {
-            throw new NotImplementedException();
-        }
 
         public override void draw(Graphics g)
         {

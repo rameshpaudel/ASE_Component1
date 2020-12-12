@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GPL_Component1
 {
-    class Circle:Shape
+    class Circle : Shape
     {
         int radius;
 
@@ -24,9 +24,15 @@ namespace GPL_Component1
 
         public override void set(Color colour, params int[] list)
         {
+            Array.ForEach(list, Console.WriteLine);
+
             //list[0] is x, list[1] is y, list[2] is radius
             base.set(colour, list[0], list[1]);
-            this.radius = list[2];
+            this.radius = 20;
+            if(list.Length > 2)
+            {
+                this.radius = list[2];
+            }
         }
 
 
@@ -46,19 +52,5 @@ namespace GPL_Component1
 
         }
 
-        public override double calcArea()
-        {
-            return Math.PI * (radius ^ 2);
-        }
-
-        public override double calcPerimeter()
-        {
-            return 2 * Math.PI * radius;
-        }
-
-        public override string ToString() //all classes inherit from object and ToString() is abstract in object
-        {
-            return base.ToString() + "  " + this.radius;
-        }
     }
 }

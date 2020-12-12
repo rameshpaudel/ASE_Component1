@@ -10,6 +10,7 @@ namespace GPL_Component1
     class Triangle:Shape
     {
         int height, hypotenus, baseSize;
+
         private Point[] points;
         public Triangle() : base()
         {
@@ -53,21 +54,6 @@ namespace GPL_Component1
             }
             g.DrawPolygon(pen, points);
 
-        }
-
-        public override double calcArea()
-        {
-            return 1/2* baseSize * height;
-        }
-
-        public override double calcPerimeter()
-        {
-            return baseSize + height + hypotenus;
-        }
-
-        public override string ToString() //all classes inherit from object and ToString() is abstract in object
-        {
-            return base.ToString() + "  " + this.height;
         }
     }
 }
