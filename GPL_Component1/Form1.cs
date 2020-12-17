@@ -75,7 +75,7 @@ namespace GPL_Component1
 
             int[] coOrdinates = { startPointX, startPointY, shapeWidth, shapeHeight };
 
-            Shape myShape = sf.getShape(selectedShapeButton.Text);
+            Shape myShape = sf.GetShape(selectedShapeButton.Text);
 
             myShape.setStroke(strokeSize);
 
@@ -127,6 +127,8 @@ namespace GPL_Component1
         {
             lastPoint = e.Location;
             isMouseDown = true;
+            pictureBox1.Image = paintImage;
+            pictureBox1.Refresh();
 
 
 
@@ -140,7 +142,7 @@ namespace GPL_Component1
             // Form pen with the color selected and the size value in tracker
 
 
-            Shape line = sf.getShape("pen");
+            Shape line = sf.GetShape("pen");
             line.setColor(colorPicker.Color);
             line.setStroke(strokeSize);
             line.setPoint(lastPoint, currentPoint);
@@ -182,12 +184,12 @@ namespace GPL_Component1
 
         private void runButton_Click(object sender, EventArgs e)
         {
-            string commandValue = commandInputBox.Text;
-            InputParser ip = new InputParser(panelGraphics, commandValue);
+            
+            InputParser ip = new InputParser(colorPicker.Color, isFilled, commandInputBox);
+            ip.Parse(panelGraphics);
             pictureBox1.Image = workingImage;
             pictureBox1.Refresh();
-            commandInputBox.Text = "";
-
+            /*commandInputBox.Text = "";*/
 
         }
 
@@ -260,9 +262,6 @@ namespace GPL_Component1
 
             paintImage = new Bitmap(fd.FileName);
             panelGraphics = Graphics.FromImage(paintImage);
-
-            workingImage = new Bitmap(fd.FileName);
-            panelGraphics = Graphics.FromImage(workingImage);
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)

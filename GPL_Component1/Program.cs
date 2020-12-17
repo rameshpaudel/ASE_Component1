@@ -16,6 +16,7 @@ namespace GPL_Component1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            VariableParser.GetInstance();
             Application.Run(new Form1());
         }
     }

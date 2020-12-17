@@ -64,7 +64,7 @@
             this.button1.BackColor = System.Drawing.Color.ForestGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(552, 23);
+            this.button1.Location = new System.Drawing.Point(283, 388);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 34);
             this.button1.TabIndex = 0;
@@ -74,10 +74,13 @@
             // 
             // commandInputBox
             // 
-            this.commandInputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.commandInputBox.Location = new System.Drawing.Point(3, 27);
+            this.commandInputBox.BackColor = System.Drawing.Color.Black;
+            this.commandInputBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commandInputBox.ForeColor = System.Drawing.Color.White;
+            this.commandInputBox.Location = new System.Drawing.Point(10, 3);
+            this.commandInputBox.Multiline = true;
             this.commandInputBox.Name = "commandInputBox";
-            this.commandInputBox.Size = new System.Drawing.Size(529, 26);
+            this.commandInputBox.Size = new System.Drawing.Size(351, 419);
             this.commandInputBox.TabIndex = 2;
             // 
             // resetButton
@@ -85,9 +88,9 @@
             this.resetButton.BackColor = System.Drawing.Color.IndianRed;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.resetButton.Location = new System.Drawing.Point(657, 23);
+            this.resetButton.Location = new System.Drawing.Point(958, 12);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(96, 34);
+            this.resetButton.Size = new System.Drawing.Size(96, 37);
             this.resetButton.TabIndex = 3;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = false;
@@ -95,22 +98,21 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.resetButton);
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.commandInputBox);
-            this.panel2.Location = new System.Drawing.Point(16, 403);
+            this.panel2.Location = new System.Drawing.Point(652, 134);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(775, 84);
+            this.panel2.Size = new System.Drawing.Size(371, 441);
             this.panel2.TabIndex = 4;
             // 
             // colorPickBtn
             // 
             this.colorPickBtn.Image = global::GPL_Component1.Properties.Resources.paint_bucket;
             this.colorPickBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.colorPickBtn.Location = new System.Drawing.Point(39, 15);
+            this.colorPickBtn.Location = new System.Drawing.Point(33, 15);
             this.colorPickBtn.Name = "colorPickBtn";
-            this.colorPickBtn.Size = new System.Drawing.Size(90, 34);
+            this.colorPickBtn.Size = new System.Drawing.Size(91, 34);
             this.colorPickBtn.TabIndex = 5;
             this.colorPickBtn.Text = "Pick Color";
             this.colorPickBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -119,10 +121,10 @@
             // 
             // penTrackBar
             // 
-            this.penTrackBar.Location = new System.Drawing.Point(39, 104);
+            this.penTrackBar.Location = new System.Drawing.Point(225, 12);
             this.penTrackBar.Minimum = 1;
             this.penTrackBar.Name = "penTrackBar";
-            this.penTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.penTrackBar.Size = new System.Drawing.Size(105, 45);
             this.penTrackBar.TabIndex = 6;
             this.penTrackBar.Value = 1;
             this.penTrackBar.ValueChanged += new System.EventHandler(this.penTrackBar_ValueChanged);
@@ -131,9 +133,9 @@
             // 
             this.circleButtonSelect.Image = global::GPL_Component1.Properties.Resources.circle;
             this.circleButtonSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.circleButtonSelect.Location = new System.Drawing.Point(39, 319);
+            this.circleButtonSelect.Location = new System.Drawing.Point(723, 15);
             this.circleButtonSelect.Name = "circleButtonSelect";
-            this.circleButtonSelect.Size = new System.Drawing.Size(88, 34);
+            this.circleButtonSelect.Size = new System.Drawing.Size(89, 34);
             this.circleButtonSelect.TabIndex = 7;
             this.circleButtonSelect.Text = "Circle";
             this.circleButtonSelect.UseVisualStyleBackColor = true;
@@ -143,9 +145,9 @@
             // 
             this.rectangleBtnSelect.Image = global::GPL_Component1.Properties.Resources.rectangle;
             this.rectangleBtnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rectangleBtnSelect.Location = new System.Drawing.Point(39, 209);
+            this.rectangleBtnSelect.Location = new System.Drawing.Point(480, 13);
             this.rectangleBtnSelect.Name = "rectangleBtnSelect";
-            this.rectangleBtnSelect.Size = new System.Drawing.Size(87, 36);
+            this.rectangleBtnSelect.Size = new System.Drawing.Size(88, 36);
             this.rectangleBtnSelect.TabIndex = 8;
             this.rectangleBtnSelect.Text = "Rectangle";
             this.rectangleBtnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -156,9 +158,9 @@
             // 
             this.squareBtnSelect.Image = global::GPL_Component1.Properties.Resources.square;
             this.squareBtnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.squareBtnSelect.Location = new System.Drawing.Point(39, 265);
+            this.squareBtnSelect.Location = new System.Drawing.Point(604, 12);
             this.squareBtnSelect.Name = "squareBtnSelect";
-            this.squareBtnSelect.Size = new System.Drawing.Size(87, 37);
+            this.squareBtnSelect.Size = new System.Drawing.Size(88, 37);
             this.squareBtnSelect.TabIndex = 9;
             this.squareBtnSelect.Text = "Square";
             this.squareBtnSelect.UseVisualStyleBackColor = true;
@@ -169,9 +171,9 @@
             this.triangleBtnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.triangleBtnSelect.Image = global::GPL_Component1.Properties.Resources.triangle;
             this.triangleBtnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.triangleBtnSelect.Location = new System.Drawing.Point(39, 369);
+            this.triangleBtnSelect.Location = new System.Drawing.Point(854, 12);
             this.triangleBtnSelect.Name = "triangleBtnSelect";
-            this.triangleBtnSelect.Size = new System.Drawing.Size(88, 37);
+            this.triangleBtnSelect.Size = new System.Drawing.Size(89, 37);
             this.triangleBtnSelect.TabIndex = 10;
             this.triangleBtnSelect.Text = "Triangle";
             this.triangleBtnSelect.UseVisualStyleBackColor = false;
@@ -180,6 +182,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.resetButton);
             this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.penButton);
             this.panel3.Controls.Add(this.circleButtonSelect);
@@ -188,15 +191,15 @@
             this.panel3.Controls.Add(this.colorPickBtn);
             this.panel3.Controls.Add(this.squareBtnSelect);
             this.panel3.Controls.Add(this.rectangleBtnSelect);
-            this.panel3.Location = new System.Drawing.Point(810, 50);
+            this.panel3.Location = new System.Drawing.Point(0, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(156, 437);
+            this.panel3.Size = new System.Drawing.Size(1066, 72);
             this.panel3.TabIndex = 11;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(51, 65);
+            this.checkBox1.Location = new System.Drawing.Point(147, 25);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(38, 17);
             this.checkBox1.TabIndex = 13;
@@ -208,9 +211,9 @@
             // 
             this.penButton.Image = global::GPL_Component1.Properties.Resources.pen;
             this.penButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.penButton.Location = new System.Drawing.Point(39, 155);
+            this.penButton.Location = new System.Drawing.Point(360, 15);
             this.penButton.Name = "penButton";
-            this.penButton.Size = new System.Drawing.Size(87, 34);
+            this.penButton.Size = new System.Drawing.Size(88, 34);
             this.penButton.TabIndex = 12;
             this.penButton.Text = "Pen";
             this.penButton.UseVisualStyleBackColor = true;
@@ -219,9 +222,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 134);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(772, 331);
+            this.pictureBox1.Size = new System.Drawing.Size(618, 441);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
@@ -232,7 +235,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(978, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -250,7 +253,7 @@
             // 
             this.openToolStripMenuItem.Image = global::GPL_Component1.Properties.Resources.upload_file;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -258,14 +261,14 @@
             // 
             this.saveToolStripMenuItem.Image = global::GPL_Component1.Properties.Resources.diskette;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -288,11 +291,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(978, 521);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1066, 613);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
