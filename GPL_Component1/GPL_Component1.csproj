@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,7 +50,13 @@
   <ItemGroup>
     <Compile Include="BaseParameterValidation.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="CodeValidator.cs" />
     <Compile Include="colorDialog1\ColorPickedEventArgs.cs" />
+    <Compile Include="ConditionParser.cs" />
+    <Compile Include="Exceptions\InvalidCommandException.cs" />
+    <Compile Include="Exceptions\InvalidConditionException.cs" />
+    <Compile Include="Exceptions\InvalidNumberFormatException.cs" />
+    <Compile Include="Exceptions\InvalidParameterException.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,10 +71,10 @@
     <Compile Include="Shape.cs" />
     <Compile Include="ShapeInterface.cs" />
     <Compile Include="ShapesFactory.cs" />
-    <Compile Include="ShapesValidator.cs" />
+    <Compile Include="CommandValidator.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Triangle.cs" />
-    <Compile Include="Validations\ShapeValidator.cs" />
+    <Compile Include="VariableParser.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
