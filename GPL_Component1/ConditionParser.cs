@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace GPL_Component1
 {
-    class ConditionParser
+    public class ConditionParser
     {
         Boolean isValid = false;
 
