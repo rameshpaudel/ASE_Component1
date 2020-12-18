@@ -128,6 +128,16 @@ namespace GPL_Component1
             return validConds.Contains(cond);
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Check valid if condition. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel . </remarks>
+        ///
+        /// <param name="cmd">  The command. </param>
+        ///
+        /// <returns>   True if it succeeds, false if it fails. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public Boolean checkValidIfCondition(string cmd)
         {
             string[] split = cmd.Split(' ');
@@ -138,11 +148,30 @@ namespace GPL_Component1
             return false;
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Check end if. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="cond"> The string to check if the condition is valid. </param>
+        ///
+        /// <returns>   True if it succeeds, false if it fails. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public Boolean checkEndIf(string cond)
         {
             return cond.ToLower().Equals("endif");
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Check valid loop condition. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel. </remarks>
+        ///
+        /// <param name="cmd">  The command. </param>
+        ///
+        /// <returns>   True if it succeeds, false if it fails. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public Boolean checkValidLoopCondition(string cmd)
         {
@@ -153,6 +182,17 @@ namespace GPL_Component1
             }
             return false;
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Check loop start. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel . </remarks>
+        ///
+        /// <param name="str">  The string. </param>
+        ///
+        /// <returns>   True if it succeeds, false if it fails. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public Boolean checkLoopStart(string str)
         {
             string s = str.Split(' ')[0].Trim().ToLower();
@@ -160,10 +200,30 @@ namespace GPL_Component1
 
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Check loop end. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel . </remarks>
+        ///
+        /// <param name="str">  The string. </param>
+        ///
+        /// <returns>   True if it succeeds, false if it fails. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public Boolean checkLoopEnd(string str)
         {
             return str.Trim().ToLower().Equals("endloop");
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Determine if valid. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel . </remarks>
+        ///
+        /// <param name="s">    The string. </param>
+        ///
+        /// <returns>   True if it succeeds, false if it fails. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         protected Boolean checkIfValid(string s)
         {
