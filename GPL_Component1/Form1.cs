@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,9 @@ namespace GPL_Component1
 
         Color currentColor;
 
+
+        /// <summary>   The file dialog. </summary>
+        OpenFileDialog fd = new OpenFileDialog();
 
         Button selectedShapeButton;
         Boolean isFilled;
@@ -189,13 +193,14 @@ namespace GPL_Component1
             ip.Parse(panelGraphics);
             pictureBox1.Image = workingImage;
             pictureBox1.Refresh();
-            /*commandInputBox.Text = "";*/
+            
 
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
             loadPictureBox();
+            commandInputBox.Text = "";
         }
 
         private void colorPickBtn_Click(object sender, EventArgs e)
@@ -226,10 +231,28 @@ namespace GPL_Component1
             selectedShapeButton = squareBtnSelect;
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Event handler. Called by triangleBtnSelect for click events. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel  </remarks>
+        ///
+        /// <param name="sender">   Source of the event. </param>
+        /// <param name="e">        Event information. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         private void triangleBtnSelect_Click(object sender, EventArgs e)
         {
             selectedShapeButton = triangleBtnSelect;
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Event handler. Called by pictureBox1 for mouse move events. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel  </remarks>
+        ///
+        /// <param name="sender">   Source of the event. </param>
+        /// <param name="e">        Mouse event information. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -257,12 +280,21 @@ namespace GPL_Component1
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog fd = new OpenFileDialog();
+            
             fd.ShowDialog();
 
             paintImage = new Bitmap(fd.FileName);
             panelGraphics = Graphics.FromImage(paintImage);
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Event handler. Called by saveToolStripMenuItem for click events. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel  </remarks>
+        ///
+        /// <param name="sender">   Source of the event. </param>
+        /// <param name="e">        Event information. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -272,14 +304,68 @@ namespace GPL_Component1
             /*paintImage.Save(sf.FileName);*/
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Event handler. Called by checkBox1 for checked changed events. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel  </remarks>
+        ///
+        /// <param name="sender">   Source of the event. </param>
+        /// <param name="e">        Event information. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             isFilled = checkBox1.Checked;
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Event handler. Called by exitToolStripMenuItem for click events. </summary>
+        ///
+        /// <remarks>   Ramesh Paudel  </remarks>
+        ///
+        /// <param name="sender">   Source of the event. </param>
+        /// <param name="e">        Event information. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Event handler. Called by loadToolStripMenuItem for click events./ </summary>
+        ///
+        /// <remarks>   Ramesh Paudel  </remarks>
+        ///
+        /// <param name="sender">   Source of the event. </param>
+        /// <param name="e">        Event information. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            fd.ShowDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                commandInputBox.Clear();
+                string line = "";
+                StreamReader sr = new StreamReader(fd.FileName);
+                while (line != null)
+                {
+                    line = sr.ReadLine();
+                    if (line != null)
+                    {
+                        commandInputBox.Text += line;
+                        commandInputBox.Text += "\r\n";
+                    }
+                }
+            }
+
+        }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Copyright 2020\nRamesh Paudel\nLeeds Beckett University\n");
         }
     }
 }

@@ -34,7 +34,7 @@ namespace GPL_Component1
 
         public bool validate(string data)
         {
-            return checkValidFunction(data) || checkValidShape(data) || data.Contains("=") || checkIfValid(data);
+            return checkValidFunction(data) || checkValidShape(data) || data.Contains("=") || checkIfValid(data) || data.Contains("+") ;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -124,7 +124,7 @@ namespace GPL_Component1
 
         public Boolean checkValidCondition(string cond)
         {
-            string[] validConds = { ">", "<", "=",">=", "<=", "==" };
+            string[] validConds = { ">", "<", "=", ">=", "<=", "==" };
             return validConds.Contains(cond);
         }
 
@@ -141,7 +141,7 @@ namespace GPL_Component1
         public Boolean checkValidIfCondition(string cmd)
         {
             string[] split = cmd.Split(' ');
-            if(split.Length == 5 && split[0].ToLower().Trim().Equals("if") && split[4].ToLower().Trim().Equals("then"))
+            if (split.Length == 5 && split[0].ToLower().Trim().Equals("if") && split[4].ToLower().Trim().Equals("then"))
             {
                 return true;
             }

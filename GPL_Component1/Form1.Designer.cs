@@ -52,6 +52,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.penTrackBar)).BeginInit();
             this.panel3.SuspendLayout();
@@ -64,7 +65,7 @@
             this.button1.BackColor = System.Drawing.Color.ForestGreen;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(283, 388);
+            this.button1.Location = new System.Drawing.Point(283, 404);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 34);
             this.button1.TabIndex = 0;
@@ -80,7 +81,7 @@
             this.commandInputBox.Location = new System.Drawing.Point(10, 3);
             this.commandInputBox.Multiline = true;
             this.commandInputBox.Name = "commandInputBox";
-            this.commandInputBox.Size = new System.Drawing.Size(351, 419);
+            this.commandInputBox.Size = new System.Drawing.Size(351, 435);
             this.commandInputBox.TabIndex = 2;
             // 
             // resetButton
@@ -88,7 +89,7 @@
             this.resetButton.BackColor = System.Drawing.Color.IndianRed;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.resetButton.Location = new System.Drawing.Point(958, 12);
+            this.resetButton.Location = new System.Drawing.Point(917, 13);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(96, 37);
             this.resetButton.TabIndex = 3;
@@ -133,7 +134,7 @@
             // 
             this.circleButtonSelect.Image = global::GPL_Component1.Properties.Resources.circle;
             this.circleButtonSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.circleButtonSelect.Location = new System.Drawing.Point(723, 15);
+            this.circleButtonSelect.Location = new System.Drawing.Point(668, 13);
             this.circleButtonSelect.Name = "circleButtonSelect";
             this.circleButtonSelect.Size = new System.Drawing.Size(89, 34);
             this.circleButtonSelect.TabIndex = 7;
@@ -158,7 +159,7 @@
             // 
             this.squareBtnSelect.Image = global::GPL_Component1.Properties.Resources.square;
             this.squareBtnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.squareBtnSelect.Location = new System.Drawing.Point(604, 12);
+            this.squareBtnSelect.Location = new System.Drawing.Point(574, 12);
             this.squareBtnSelect.Name = "squareBtnSelect";
             this.squareBtnSelect.Size = new System.Drawing.Size(88, 37);
             this.squareBtnSelect.TabIndex = 9;
@@ -171,7 +172,7 @@
             this.triangleBtnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.triangleBtnSelect.Image = global::GPL_Component1.Properties.Resources.triangle;
             this.triangleBtnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.triangleBtnSelect.Location = new System.Drawing.Point(854, 12);
+            this.triangleBtnSelect.Location = new System.Drawing.Point(763, 12);
             this.triangleBtnSelect.Name = "triangleBtnSelect";
             this.triangleBtnSelect.Size = new System.Drawing.Size(89, 37);
             this.triangleBtnSelect.TabIndex = 10;
@@ -243,6 +244,7 @@
             // 
             this.fIleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
+            this.loadToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fIleToolStripMenuItem.Name = "fIleToolStripMenuItem";
@@ -253,7 +255,7 @@
             // 
             this.openToolStripMenuItem.Image = global::GPL_Component1.Properties.Resources.upload_file;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -261,14 +263,14 @@
             // 
             this.saveToolStripMenuItem.Image = global::GPL_Component1.Properties.Resources.diskette;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -283,8 +285,16 @@
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Text = "Load ";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -337,6 +347,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
     }
 }
 
